@@ -1,0 +1,19 @@
+<section class="wfrp3-dice-tray">
+  <div>
+  <div class="wfrp3-dice-tray__buttons flexrow">
+    {{#each dice as |label key|}}
+      <button class="wfrp3-dice-tray__button" data-option="{{key}}" title="{{key}}" style="background-image:url('modules/wfrp3-dice-tray/icons/{{key}}.png')">
+        <span class="wfrp3-dice-tray__flag wfrp3-dice-tray__flag hide"></span>
+      </button>
+    {{/each}}
+  </div>
+  <div class="wfrp3-dice-tray__buttons flexrow">
+    {{#each dice as |label key|}}
+      <input class="wfrp3-dice-tray__input" name="wfrp3.dice.tray.{{key}}" type="text" value="0"/>
+    {{/each}}
+  </div>
+</div>
+<div>
+  <button class="wfrp3-dice-tray__roll">Roll!</button>
+</div>
+</section>

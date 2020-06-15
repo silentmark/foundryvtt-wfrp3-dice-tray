@@ -1,5 +1,3 @@
-CONFIG.debug.hooks = true;
-
 Hooks.on('renderSidebarTab', (app, html, data) => {
   let $chat_form = html.find('#chat-form');
   const template = 'modules/wfrp3-dice-tray/templates/tray.html';
@@ -19,16 +17,22 @@ Hooks.on('renderSidebarTab', (app, html, data) => {
     if (c.length > 0) {
       let $content = $(c);
       $chat_form.after($content);
-      $content.find('.wfrp3-dice-tray__button').on('click', event => {
+      $content.find('.wfrp3-dice-tray__button').on('mousedown', event => {
         event.preventDefault();
         let dataset = event.currentTarget.dataset;
 
-        let input = html.find('input[name="wfrp3.dice.tray."' + dataset.option + ']');
+        let input = html.find('input[name="wfrp3.dice.tray.' + dataset.option + '"]');
         let current = parseInt(input.val());
         if(current === NaN) {
           current = 0;
         }
-        input.val(current + 1);
+        if(event.button == 2) {
+          if(current > 0){
+            input.val(current - 1);
+          }
+        } else {
+          input.val(current + 1);
+        }
       });
       $content.find('.wfrp3-dice-tray__roll').on('click', event => {
         event.preventDefault();

@@ -23,10 +23,10 @@ Hooks.on('renderSidebarTab', (app, html, data) => {
 
         let input = html.find('input[name="wfrp3.dice.tray.' + dataset.option + '"]');
         let current = parseInt(input.val());
-        if(current === NaN) {
+        if (current === NaN) {
           current = 0;
         }
-        if(event.button == 2) {
+        if (event.button == 2) {
           if(current > 0){
             input.val(current - 1);
           }

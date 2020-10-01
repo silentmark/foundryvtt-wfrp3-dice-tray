@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "CSS compiler for the dice tray",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "gulp",
     "compile": "gulp css",
     "watch": "gulp",
@@ -14,6 +15,10 @@
   "author": "John Doe",
   "license": "MIT",
   "private": true,
+  "resolutions": {
+    "yargs-parser": "^13.1.2",
+    "lodash": ">=4.17.19"
+  },
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",

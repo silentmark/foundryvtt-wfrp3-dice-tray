@@ -5,15 +5,22 @@
   "version": "0.1.0",
   "author": "m.kembrowski",
   "minimumCoreVersion": "0.5.0",
-  "compatibleCoreVersion": "0.6.1",
+  "compatibleCoreVersion": "0.6.6",
   "scripts": [
     "./scripts/wfrp-dice-tray.js"
   ],
   "styles": [
     "./css/wfrp-dice-tray.css"
   ],
+  "dependencies": [
+    {
+      "name": "special-dice-roller",
+      "manifest": "https://github.com/BernhardPosselt/foundryvtt-special-dice-roller/raw/master/module.json",
+      "type": "module"
+    }
+  ],
   "packs": [],
-  "url": "",
-  "manifest": "",
-  "download": ""
+  "url": "https://github.com/silentmark/foundryvtt-wfrp3-dice-tray",
+  "manifest": "https://raw.githubusercontent.com/silentmark/foundryvtt-wfrp3-dice-tray/master/module.json",
+  "download": "https://github.com/silentmark/foundryvtt-wfrp3-dice-tray/releases/download/0.1.0/wfrp3-dice-tray.zip"
 }

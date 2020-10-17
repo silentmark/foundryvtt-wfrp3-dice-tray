@@ -1,6 +1,6 @@
 # Install
 
-TODO: 
+Under modules tab in FoundryVTT paste following link under Install: https://raw.githubusercontent.com/silentmark/foundryvtt-wfrp3-dice-tray/master/module.json
 
 # Description
 
